@@ -8,12 +8,6 @@
           "allowedRoles": ["authenticated"]
         }
       ],
-      "responseOverrides": {
-        "401": {
-          "statusCode": 302,
-          "redirect": "/.auth/login/okta"
-        }
-      },
       "auth": {
         "identityProviders": {
           "customOpenIdConnectProviders": {
