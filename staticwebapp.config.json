@@ -1,5 +1,34 @@
 {
     "navigationFallback": {
         "rewrite": "/index.html"
-    }
+    },
+    "routes": [
+        {
+          "route": "/*",
+          "allowedRoles": ["authenticated"]
+        }
+      ],
+      "responseOverrides": {
+        "401": {
+          "statusCode": 302,
+          "redirect": "/.auth/login/okta"
+        }
+      },
+      "auth": {
+        "identityProviders": {
+          "customOpenIdConnectProviders": {
+            "okta": {
+              "registration": {
+                "clientIdSettingName": "0oacqd5d5lGC3ApbK697",
+                "clientCredential": {
+                  "clientSecretSettingName": "LlTRIYlKJ-_jvHP1-V-V7qm3yuOCBmr8OvcJ4W8WON7-5ygan2yWrY1LrukxbcYu"
+                },
+                "openIdConnectConfiguration": {
+                  "wellKnownOpenIdConfiguration": "https://trial-4274593.okta.com/.well-known/openid-configuration"
+                }
+              }
+            }
+          }
+        }
+      }
 }
