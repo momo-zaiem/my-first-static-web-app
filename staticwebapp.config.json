@@ -11,20 +11,20 @@
       "responseOverrides": {
         "401": {
           "statusCode": 302,
-          "redirect": "/.auth/login/okta"
+          "redirect": "/.auth/login/auth0"
         }
       },
       "auth": {
         "identityProviders": {
           "customOpenIdConnectProviders": {
-            "okta": {
+            "auth0": {
               "registration": {
                 "clientIdSettingName": "MY_PROVIDER_CLIENT_ID",
                 "clientCredential": {
                   "clientSecretSettingName": "MY_PROVIDER_CLIENT_SECRET"
                 },
                 "openIdConnectConfiguration": {
-                  "wellKnownOpenIdConfiguration": "https://trial-4274593.okta.com/.well-known/openid-configuration"
+                  "wellKnownOpenIdConfiguration": "https://dev-qhc4153owzid4cjg.us.auth0.com/.well-known/openid-configuration"
                 }
               }
             }
