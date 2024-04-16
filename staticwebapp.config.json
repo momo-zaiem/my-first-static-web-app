@@ -5,7 +5,7 @@
     "routes": [
         {
           "route": "/*",
-          "allowedRoles": ["AccessDummyReactAzure_01"]
+          "allowedRoles": ["authenticated"]
         }
       ],
       "responseOverrides": {
