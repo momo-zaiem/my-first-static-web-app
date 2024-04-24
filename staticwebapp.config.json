@@ -11,20 +11,20 @@
       "responseOverrides": {
         "401": {
           "statusCode": 302,
-          "redirect": "/.auth/login/auth0"
+          "redirect": "/.auth/login/keycloak"
         }
       },
       "auth": {
         "identityProviders": {
           "customOpenIdConnectProviders": {
-            "auth0": {
+            "keycloak": {
               "registration": {
                 "clientIdSettingName": "MY_PROVIDER_CLIENT_ID",
                 "clientCredential": {
                   "clientSecretSettingName": "MY_PROVIDER_CLIENT_SECRET"
                 },
                 "openIdConnectConfiguration": {
-                  "wellKnownOpenIdConfiguration": "https://dev-qhc4153owzid4cjg.us.auth0.com/.well-known/openid-configuration"
+                  "wellKnownOpenIdConfiguration": "http://mz-poc-keycloak.grayforest-e13a4cf9.canadacentral.azurecontainerapps.io/realms/poc-realm/.well-known/openid-configuration"
                 }
               }
             }
